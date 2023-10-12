@@ -19,6 +19,7 @@
   <button type="button" onclick="startTime()">Start Timer</button>
 
   <button type="button" onclick="recordTime()">React</button>
+  
   <script>
 
     var reactTime = undefined;
@@ -32,22 +33,6 @@
     }
   
    
-  
-    function startTime() {
-  
-      let i=0;
-  
-      while(i < 9){
-  
-        setTimeout(function(){
-  
-          document.getElementById('counter').innerHTML="counter is:"+ i
-  
-        }, (8 - i) * 1000)
-  
-        i++;
-  
-      }
   
       setTimeout(function(){
   
@@ -67,7 +52,18 @@
   
       },8000)
   
-    }
+    
+    function startTime() {
+            let countdown = Math.floor(Math.random() * 9) + 2
+            var y = countdown*1000
+            for(let i=0; i < 9; i++){
+                setTimeout(() => {
+                    document.getElementById("counter").innerHTML = i;
+                }, (8 - i) * 1000)
+            }
+        }
+      
+    
   
   </script>
   

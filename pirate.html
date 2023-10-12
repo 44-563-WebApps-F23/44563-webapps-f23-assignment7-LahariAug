@@ -33,7 +33,7 @@
     <p id="penalty">Penalty is zero</p>
     <p><button onclick="help()">Click for help</button></p>
     <p id="help">Help report</p>
-    <p><button onclick="bonusGame()">bonusGame</button></p>
+    <p><button onclick="resetGame()">NewGame</button></p>
     <div class="container">
         <div class="row">
             <div class="col-sm-2"><img src="Location.jpg" id="0" width="100px" height="100px" onclick="check(0)"></div>
@@ -155,13 +155,17 @@
         document.getElementById('help').textContent=text;
 
     }
-    function bonusGame()
-    {
-        let penalty=0;
-      let checkCount=0;
-      treasureLocation=Math.floor(Math.random()*25);
-      trapLocation=Math.floor(Math.random()*25);
-   }
+    function resetGame() {
+                treasureLocation = Math.floor(Math.random() * 25)
+                while(treasureLocation == 12) {
+                    treasureLocation = Math.floor(Math.random() * 25) }
+                chestCount = 0
+                penalty = 0
+                document.getElementById("locations").innerHTML = "Number of locations checked is Zero " + chestCount;
+                document.getElementById("penalty").innerHTML = "chestCount " + penalty;
+                for(let i = 0; i < 25; i++) {
+                    if(i != 12) {
+                        document.getElementById(ids[i]).src = "Treasure.jpg"}}}
     
     
 
