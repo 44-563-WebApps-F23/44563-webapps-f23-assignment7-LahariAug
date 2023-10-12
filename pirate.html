@@ -33,6 +33,7 @@
     <p id="penalty">Penalty is zero</p>
     <p><button onclick="help()">Click for help</button></p>
     <p id="help">Help report</p>
+    <p><button onclick="bonusGame()">bonusGame</button></p>
     <div class="container">
         <div class="row">
             <div class="col-sm-2"><img src="Location.jpg" id="0" width="100px" height="100px" onclick="check(0)"></div>
@@ -46,7 +47,7 @@
             <div class="col-sm-2"><img src="Location.jpg" id="6"  width="100px" height="100px" onclick="check(6)"></div>
             <div class="col-sm-2"><img src="Location.jpg" id="7"  width="100px" height="100px" onclick="check(7)"></div>
             <div class="col-sm-2"><img src="Location.jpg" id="8"  width="100px" height="100px" onclick="check(8)"></div>
-            <div class="col-sm-2"><img src="Location.jpg" id="9" width="100px" height="100px" onclick="check(9)"></div>
+            <div class="col-sm-2"><img src="Location.jpg" id="9" width="100px" height="100px"  onclick="check(9)"></div>
         </div><br>
         <div class="row">
             <div class="col-sm-2"><img src="Location.jpg" id="10"  width="100px" height="100px" onclick="check(10)"></div>
@@ -154,15 +155,15 @@
         document.getElementById('help').textContent=text;
 
     }
-    trapLocation =Math.floor(Math.random()*25);
-    treasureLocation =Math.floor(Math.random()*25);
-    checkCount=0;
-    penalty=0;
-    lastCheck=0;
-    gameOver=false;
-    document.getElementById("locations").textContent="Number of locations checked is 0";
-    document.getElementById("penalty").textContent="Penalty is 0";
-    document.getElementById("help").textContent="Click for help";
+    function bonusGame()
+    {
+        let penalty=0;
+      let checkCount=0;
+      treasureLocation=Math.floor(Math.random()*25);
+      trapLocation=Math.floor(Math.random()*25);
+   }
+    
+    
 
     </script>
 </body>
